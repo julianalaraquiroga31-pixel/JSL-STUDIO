@@ -1,0 +1,520 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CUERPO */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0d0d0d;
+    color: #ffffff;
+    line-height: 1.6;
+
+    /* BORDE DE LA PÁGINA */
+    margin: 10px;
+
+    border: 3px solid;
+
+    border-image:
+    linear-gradient(
+    90deg,
+    #3a1db9,
+    #00c3ff,
+    #ff00cc
+    ) 1;
+}
+
+/* HEADER CON IMAGEN */
+header {
+
+    background:
+    url('imagenes/fondos-padres.jpg')
+    no-repeat center/cover;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    position: relative;
+}
+
+/* OSCURECER IMAGEN */
+header::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.6);
+}
+
+/* CONTENIDO ENCIMA */
+header * {
+    position: relative;
+    z-index: 1;
+}
+
+/* LOGO */
+.logo {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+/* NAV */
+nav {
+
+    background-color: #1a1a1a;
+
+    display: flex;
+
+    justify-content: space-evenly;
+
+    align-items: center;
+
+    padding: 0;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 999;
+}
+
+/* LINKS NAV */
+nav a {
+
+    flex: 1;
+
+    text-align: center;
+
+    color: #ccc;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    padding: 18px 0;
+
+    transition: 0.3s;
+}
+
+/* HOVER NAV */
+nav a:hover {
+
+    background-color: #3a1db9;
+
+    color: black;
+
+    transform: scale(1.03);
+}
+
+/* CONTENIDO */
+.container {
+    padding: 30px;
+}
+
+/* IMAGEN + TEXTO */
+.fila {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin: 30px 0;
+}
+
+/* IMAGEN */
+.imagen {
+
+    width: 250px;
+
+    border-radius: 12px;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,0.5);
+}
+
+/* TEXTO */
+.texto {
+    flex: 1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .fila {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .imagen {
+        width: 100%;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 100%;
+    }
+}
+
+/* FOOTER */
+footer {
+
+    background-color: #111;
+
+    color: #aaa;
+
+    text-align: center;
+
+    padding: 15px;
+
+    margin-top: 20px;
+}
+
+/* SCROLL SUAVE */
+html {
+    scroll-behavior: smooth;
+}
+
+/* REDES LATERALES */
+.redes-lateral {
+
+    position: fixed;
+
+    top: 50%;
+
+    right: 0;
+
+    transform: translateY(-50%);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 10px;
+
+    z-index: 1000;
+}
+
+/* BOTONES */
+.redes-lateral a {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 45px;
+
+    height: 45px;
+
+    background: #222;
+
+    border-radius: 10px 0 0 10px;
+
+    transition: all 0.3s ease;
+}
+
+/* ICONOS */
+.redes-lateral i {
+
+    font-size: 20px;
+
+    color: white;
+}
+
+/* HOVER BOTONES */
+.redes-lateral a:hover {
+
+    transform: translateX(-5px);
+
+    background: #444;
+}
+
+/* IMÁGENES ICONOS */
+.redes-lateral a img {
+
+    width: 70%;
+
+    height: auto;
+
+    padding: 5px;
+
+    background: #1a1a1a;
+
+    border-radius: 0 12px 12px 0;
+
+    transition: 0.3s;
+
+    animation: flotar 3s ease-in-out infinite;
+}
+
+/* HOVER ICONOS */
+.redes-lateral a img:hover {
+
+    transform:
+    scale(1.2)
+    translateX(10px);
+
+    background: #3a1db9;
+}
+
+/* ANIMACIÓN */
+@keyframes flotar {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* DESFASE ANIMACIÓN */
+.redes-lateral a:nth-child(2) img {
+    animation-delay: 0.5s;
+}
+
+.redes-lateral a:nth-child(3) img {
+    animation-delay: 1s;
+}
+
+/* TITULOS */
+h1, h2 {
+
+    color: transparent;
+
+    -webkit-text-stroke: 1px #00c3ff;
+
+    letter-spacing: 2px;
+}
+
+/* FORMULARIO */
+.contacto-form {
+
+    max-width: 500px;
+
+    margin: 40px auto;
+
+    padding: 30px;
+
+    background: #111;
+
+    border-radius: 15px;
+
+    box-shadow:
+    0 0 20px rgba(58, 29, 185, 0.3);
+}
+
+.grupo {
+
+    position: relative;
+
+    margin-bottom: 25px;
+}
+
+.grupo input,
+.grupo textarea {
+
+    width: 100%;
+
+    padding: 12px;
+
+    background: none;
+
+    border: 2px solid #333;
+
+    border-radius: 8px;
+
+    color: white;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+/* EFECTO FOCUS */
+.grupo input:focus,
+.grupo textarea:focus {
+
+    border-color: #00c3ff;
+
+    box-shadow:
+    0 0 8px rgba(0,195,255,0.3);
+}
+
+.grupo label {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 12px;
+
+    color: #aaa;
+
+    transform: translateY(-50%);
+
+    transition: 0.3s;
+
+    pointer-events: none;
+}
+
+.grupo input:focus + label,
+.grupo input:valid + label,
+.grupo textarea:focus + label,
+.grupo textarea:valid + label {
+
+    top: -10px;
+
+    font-size: 12px;
+
+    color: #00c3ff;
+
+    background: #111;
+
+    padding: 0 5px;
+}
+
+.contacto-form button {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background:
+    linear-gradient(
+    90deg,
+    #3a1db9,
+    #00c3ff
+    );
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* HOVER BOTÓN */
+.contacto-form button:hover {
+
+    transform: scale(1.05);
+
+    background:
+    linear-gradient(
+    90deg,
+    #00c3ff,
+    #ff00cc
+    );
+
+    box-shadow:
+    0 0 15px rgba(0,195,255,0.5);
+}
+
+/* HISTORIAL ACADEMICO */
+.historial {
+
+    margin-top: 50px;
+
+    text-align: center;
+}
+
+/* RECUADRO */
+.historial-box {
+
+    margin-top: 25px;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    background:
+    rgba(20,20,20,0.9);
+
+    border: 2px solid transparent;
+
+    border-image:
+    linear-gradient(
+    90deg,
+    #3a1db9,
+    #00c3ff,
+    #ff00cc
+    ) 1;
+
+    box-shadow:
+    0 0 25px rgba(0,195,255,0.2);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+/* ITEMS */
+.item-academico {
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    background: #151515;
+
+    transition: 0.3s;
+}
+
+/* HOVER */
+.item-academico:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+    0 0 20px rgba(0,195,255,0.3);
+}
+
+/* TITULOS */
+.item-academico h3 {
+
+    color: #00c3ff;
+
+    margin-bottom: 10px;
+
+    letter-spacing: 1px;
+}
+
+/* TEXTO */
+.item-academico p {
+    color: #ccc;
+}
