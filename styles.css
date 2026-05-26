@@ -518,22 +518,9 @@ h1, h2 {
 .item-academico p {
     color: #ccc;
 }
-/* ===== SERVICIOS ===== */
+/* ===== CARDS SERVICIOS ===== */
 
-.servicios-container{
-
-    display: grid;
-
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-
-    gap: 30px;
-
-    margin-top: 40px;
-}
-
-/* TARJETAS */
-
-.servicio-card{
+.card{
 
     background: rgba(255,255,255,0.05);
 
@@ -547,11 +534,13 @@ h1, h2 {
 
     border-radius: 25px;
 
-    transition: 0.4s ease;
+    margin-top: 30px;
 
     position: relative;
 
     overflow: hidden;
+
+    transition: 0.4s ease;
 
     box-shadow:
     0 8px 20px rgba(0,0,0,0.4);
@@ -559,7 +548,7 @@ h1, h2 {
 
 /* LINEA SUPERIOR */
 
-.servicio-card::before{
+.card::before{
 
     content: "";
 
@@ -583,7 +572,7 @@ h1, h2 {
 
 /* HOVER */
 
-.servicio-card:hover{
+.card:hover{
 
     transform:
     translateY(-10px)
@@ -592,13 +581,11 @@ h1, h2 {
     box-shadow:
     0 15px 30px rgba(0,0,0,0.5),
     0 0 20px rgba(0,195,255,0.3);
-
-    border: 1px solid rgba(255,255,255,0.2);
 }
 
-/* TITULO */
+/* TITULOS */
 
-.servicio-card h3{
+.card h3{
 
     color: #00c3ff;
 
@@ -609,7 +596,7 @@ h1, h2 {
 
 /* TEXTO */
 
-.servicio-card p{
+.card p{
 
     color: #ccc;
 }
